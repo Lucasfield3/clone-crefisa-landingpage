@@ -1,0 +1,78 @@
+.header-fixed-container {
+    background: #38bfe4;
+    height:4rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 7rem;
+    width:100%;
+
+    :first-child{
+        height: 4rem;
+        display: flex;
+        align-items: center;
+
+
+
+        :not(:first-child):not(div):not(li){
+            transition: color 0.2s ease-in-out;
+            &:hover{
+                color:#38bfe4;
+                background:#fff;
+            }
+        }
+
+        .drop-container{
+            display: flex;
+            flex-direction: column;
+            
+            a{
+                transition: color 0.2s ease-in-out;
+            }
+            &:hover > a{
+                color:#38bfe4;
+                background:#fff;
+            }
+            
+            div {
+                padding-top: 1rem;
+            }
+        }
+        
+    }
+
+    a {
+        height: 4rem;
+        line-height: 4rem;
+        color:#fff;
+        text-decoration: none;
+        font-size: 0.9rem;
+        letter-spacing: 1.2px;
+        padding:0 1rem;
+    }
+
+    :nth-child(2){
+        display: flex;
+
+        :first-child{
+            
+            a{
+                font-size: 1.4rem;
+                margin-right: 5rem;
+                font-weight: 300;
+                gap: 0.4rem;
+            }
+        }
+
+        :nth-child(2){
+            a{
+                display: flex;
+                gap: 0.4rem;
+            }
+        }
+    }
+
+    img{
+        width: 5.5rem;
+        height: 2.5rem !important;
+    }
+}

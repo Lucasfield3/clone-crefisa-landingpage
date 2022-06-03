@@ -1,0 +1,30 @@
+.drop-menu{
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(0rem, 4rem);
+
+    ul {
+        list-style: none;
+        height: auto !important;
+        display: flex;
+        flex-direction: column;
+        font-size: 0.75rem;
+        align-items: flex-start;
+        padding-bottom: 1rem;
+        li{
+            transition: background .2s ease-in-out;
+            cursor: pointer;
+            width: 100%;
+            height: auto !important;
+            padding: 0 1rem;
+            line-height: 2rem;
+            &:hover{
+                background:rgba(35, 185, 226, 0.2);
+            }
+        }
+
+        // li:not(:first-child){
+        //     padding-top: 1rem;
+        // }
+    }
+}
