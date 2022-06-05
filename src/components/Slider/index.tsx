@@ -115,30 +115,35 @@ export const Slider = () =>{
                         <ButtonSlide frase='CONTRATE AGORA' background='#fdb913' color='#fff'/>
                       </div>
                     <img src="https://www.crefisa.com.br/wp-content/uploads/2022/05/site-novo.jpg" alt="logo" />
+                    <div className="overlay"></div>
                   </li>
                   <li className="slide" id='2'>
                       <div>
                         <ButtonSlide frase='CONTRATE AGORA' background='#fdb913' color='#fff'/>
                       </div>
                       <img src="https://www.crefisa.com.br/wp-content/uploads/2022/03/1920x680-site_Dinheiro-Hora_.jpg" alt="logo" />
+                      <div className="overlay"></div>
                     </li>
                   <li className="slide" id='3'>
                       <div>
                         <ButtonSlide frase='SAIBA MAIS' background='#178ac2' color='#fff'/>
                       </div>
                       <img src="https://www.crefisa.com.br/wp-content/uploads/2022/03/1920x680-site_Dinheiro-Hora.jpg" alt="logo" />
+                      <div className="overlay"></div>
                   </li>
                   <li className="slide" id='4'>
                       <div>
                         <ButtonSlide frase='SAIBA MAIS' background='#fdb913' color='#fff'/>
                       </div>
                       <img src="https://www.crefisa.com.br/wp-content/uploads/2022/04/COVER-SITE-1920_x680_INSS.jpg" alt="logo" />
+                      <div className="overlay"></div>
                     </li>
                   <li className="slide" id='5'>
                       <div>
                         <ButtonSlide frase='SAIBA MAIS' background='#fdb913' color='#fff'/>
                       </div>
                       <img src="https://www.crefisa.com.br/wp-content/uploads/2022/03/Fique-Atento-Crefisa-banner-Home.jpg" alt="logo" />
+                      <div className="overlay"></div>
                   </li>
               </ul>
       
@@ -156,6 +161,7 @@ export const Slider = () =>{
                     })}
                 </div>
     
+        
           </div>
      )
 

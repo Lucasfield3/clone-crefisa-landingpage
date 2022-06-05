@@ -29,6 +29,7 @@
                 align-items: self-end;
                 padding-bottom: 5.6rem;
                 padding-left: 12rem;
+                overflow: auto;
             }
             
         }
@@ -103,3 +104,16 @@
         
     }
 }
+
+
+.overlay{
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100vw !important;
+    height: 99% !important;
+    z-index: 1;
+    background: -webkit-gradient( linear, left bottom, left top, from(rgba(0, 84, 128, 0.3)), color-stop(80%, transparent), to(transparent) );
+    background: linear-gradient( to top, rgba(0, 84, 128, 0.3) 0%, transparent 80%, transparent 100% );
+    }
