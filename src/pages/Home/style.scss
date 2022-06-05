@@ -1,4 +1,18 @@
 .home-container{
-    display: grid;
+    width: 100%;
+    height: auto;
 
+    .warning{
+        height: 5.5rem;
+        width: 100%;
+        background-color: #fdb913;
+        color: #fff;
+        text-align: left;
+        padding: 0 12rem;
+        line-height: 5.5rem;
+
+        p{
+            font-size: 1.5rem;
+        }
+    }
 }

@@ -2,30 +2,31 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    height: 2.5rem;
+    height: 4.5rem;
     align-items: center;
     background: #1bafd8;
-    padding: 0 7rem;
+    padding: 0 12rem;
 
     > div{
         display:flex;
         height:100%;
         align-items: center;
         a {
-            height: 2.5rem;
-            line-height: 2.5rem;
+            height: 4.5rem;
+            line-height: 4.5rem;
             color:#fff;
             text-decoration: none;
-            font-size: 0.6rem;
-            letter-spacing: 1.2px;
-            margin-right: 1rem;
+            font-size: 0.9rem;
+            letter-spacing: 1.8px;
+            margin-right: 3rem;
+            font-weight: 600;
         }
     }
 
     :nth-child(2){
         :not(:first-child){
             background-color: #fdb913;
-            padding: 0 1.5rem;
+            padding: 0 2.5rem;
             margin-right: 0 !important;
         }
     }

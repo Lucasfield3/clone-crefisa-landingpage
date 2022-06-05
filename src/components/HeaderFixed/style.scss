@@ -1,17 +1,20 @@
 .header-fixed-container {
+
     background: #38bfe4;
-    height:4rem;
     display: flex;
     justify-content: space-between;
-    padding: 0 7rem;
-    width:100%;
+    padding: 0 12rem;
+    width: 100%;
+
 
     :first-child{
-        height: 4rem;
+        height: 6rem;
         display: flex;
         align-items: center;
 
-
+        .custom-img{
+            padding-left: 0rem;
+        }
 
         :not(:first-child):not(div):not(li){
             transition: color 0.2s ease-in-out;
@@ -41,14 +44,16 @@
     }
 
     a {
-        height: 4rem;
-        line-height: 4rem;
+        height: 6rem;
+        line-height: 6rem;
         color:#fff;
         text-decoration: none;
-        font-size: 0.9rem;
-        letter-spacing: 1.2px;
-        padding:0 1rem;
+        font-size: 1.5rem;
+        padding:0 2rem;
+        font-weight: 400;
     }
+
+
 
     :nth-child(2){
         display: flex;
@@ -56,23 +61,33 @@
         :first-child{
             
             a{
-                font-size: 1.4rem;
                 margin-right: 5rem;
                 font-weight: 300;
                 gap: 0.4rem;
+                font-size: 2.2rem;
+                font-weight: 300;
             }
+
+         
         }
 
         :nth-child(2){
             a{
                 display: flex;
                 gap: 0.4rem;
+                transition: color 0.2s ease-in-out;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            &:hover > a{
+                color:#38bfe4;
+                background:#fff;
             }
         }
     }
 
     img{
-        width: 5.5rem;
-        height: 2.5rem !important;
+        width: 9rem;
+        height: 4rem !important;
     }
 }
