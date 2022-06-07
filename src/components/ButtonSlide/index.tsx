@@ -1,15 +1,15 @@
+import { CSSProperties } from 'react';
 import './style.scss'
 
 type Props = {
     frase:string;
-    color:string;
-    background:string;
+    style?:CSSProperties;
 }
 
 export const ButtonSlide = (props:Props) =>{
 
      return(
-          <button className="button-slide" style={{color:props.color, background:props.background}}>
+          <button className="button-slide" onTransitionEnd={(e)=> e.stopPropagation()} style={props.style}>
               {props.frase}
           </button>
      )

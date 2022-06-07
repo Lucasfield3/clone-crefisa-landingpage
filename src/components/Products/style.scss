@@ -1,0 +1,81 @@
+.produts-container{
+    display: flex;
+    flex-direction: column;
+    padding: 8.5rem 16rem 2rem 13rem;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(#f5f5f5 52%, #ffffff 48%);
+
+    .carousel{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        overflow: hidden;
+        position: relative;
+
+
+        .slider{
+            display: flex;
+            width: 500%;
+            height: 100%;
+            flex-shrink: 1;
+            transition: all 0.5s;
+
+            .product{
+                display: flex;
+                flex-basis: 25%;
+                flex-shrink: 0;
+                flex-direction: column;
+                width: 15rem;
+                gap: 1rem;
+                padding-right: 2rem;
+                
+                img{
+                    border-radius: 4px;
+                }
+    
+                h3{
+                    font-size:3.3rem;
+                    color:#23b9e2;
+                    font-weight: 200;
+                    margin-bottom:2rem;
+                }
+    
+                p{
+                    font-size: 1.5rem;
+                    color: #212529;
+                    height: 10rem;
+                    line-height: 1.5;
+                }
+    
+                button{
+                    font-size:1.1rem;
+                }
+            }
+        }
+        
+    }
+
+    header{
+        text-align: left;
+        width: 100%;
+        margin-bottom: 6rem;
+        p{
+            font-size:1.7rem;
+            color:#888888;
+            margin-bottom:1rem;
+        }
+
+        h1{
+            font-size: 6rem;
+            color:#23b9e2;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            width: 61rem;
+            line-height:6rem;
+        }
+    }
+
+    
+}

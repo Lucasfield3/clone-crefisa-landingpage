@@ -1,5 +1,6 @@
 import {  useEffect, useState } from 'react'
 import { MdKeyboardArrowRight } from 'react-icons/md'
+import { ButtonNext } from '../ButtonNext'
 import { ButtonSlide } from '../ButtonSlide'
 import './style.scss'
 
@@ -8,7 +9,7 @@ export const Slider = () =>{
     const [ nextButton, setNextButton ] = useState(1)
     const [isLoaded, setIsLoaded] = useState(false)
 
-    const slides = [1,2,3,4,5]
+    const slidesButtonsArray = [1,2,3,4,5]
 
     const [ isOnInterval, setIsOnInterval] = useState(true)
     
@@ -112,47 +113,43 @@ export const Slider = () =>{
               <ul className='sliders'>
                   <li className="slide" id='1'>
                       <div>
-                        <ButtonSlide frase='CONTRATE AGORA' background='#fdb913' color='#fff'/>
+                        <ButtonSlide frase='CONTRATE AGORA' style={{background:'#fdb913', color:'#fff'}}/>
                       </div>
                     <img src="https://www.crefisa.com.br/wp-content/uploads/2022/05/site-novo.jpg" alt="logo" />
-                    <div className="overlay"></div>
                   </li>
                   <li className="slide" id='2'>
                       <div>
-                        <ButtonSlide frase='CONTRATE AGORA' background='#fdb913' color='#fff'/>
+                        <ButtonSlide frase='CONTRATE AGORA' style={{background:'#fdb913', color:'#fff'}}/>
                       </div>
                       <img src="https://www.crefisa.com.br/wp-content/uploads/2022/03/1920x680-site_Dinheiro-Hora_.jpg" alt="logo" />
-                      <div className="overlay"></div>
+
                     </li>
                   <li className="slide" id='3'>
                       <div>
-                        <ButtonSlide frase='SAIBA MAIS' background='#178ac2' color='#fff'/>
+                        <ButtonSlide frase='SAIBA MAIS' style={{background:'#178ac2', color:'#fff'}}/>
                       </div>
                       <img src="https://www.crefisa.com.br/wp-content/uploads/2022/03/1920x680-site_Dinheiro-Hora.jpg" alt="logo" />
-                      <div className="overlay"></div>
+
                   </li>
                   <li className="slide" id='4'>
                       <div>
-                        <ButtonSlide frase='SAIBA MAIS' background='#fdb913' color='#fff'/>
+                        <ButtonSlide frase='SAIBA MAIS' style={{background:'#fdb913', color:'#fff'}}/>
                       </div>
                       <img src="https://www.crefisa.com.br/wp-content/uploads/2022/04/COVER-SITE-1920_x680_INSS.jpg" alt="logo" />
-                      <div className="overlay"></div>
+
                     </li>
                   <li className="slide" id='5'>
                       <div>
-                        <ButtonSlide frase='SAIBA MAIS' background='#fdb913' color='#fff'/>
+                        <ButtonSlide frase='SAIBA MAIS' style={{background:'#fdb913', color:'#fff'}}/>
                       </div>
                       <img src="https://www.crefisa.com.br/wp-content/uploads/2022/03/Fique-Atento-Crefisa-banner-Home.jpg" alt="logo" />
-                      <div className="overlay"></div>
+
                   </li>
               </ul>
       
-                <div className="arrow-next">
-                    <button className="button-next" onClick={()=> setNextButton(nextButton + 1)}><MdKeyboardArrowRight size={30} fontWeight='normal' color="#fff"/></button>
-                </div>
-
+                <ButtonNext top={"51%"}  color="#ffffff"  onClick={()=> setNextButton(nextButton + 1)}/>
                 <div id="container-slide" className="container-slide-buttons">
-                    {slides.map((index)=>{
+                    {slidesButtonsArray.map((index)=>{
                         return (
                             <div key={index} className="slide-button" id={String(index)} onClick={()=>setNextButton(index)} tabIndex={1}>
                                 <span></span>

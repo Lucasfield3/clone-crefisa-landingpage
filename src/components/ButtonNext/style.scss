@@ -1,0 +1,18 @@
+.arrow-next{
+    z-index: 999;
+    position: absolute;
+    right: 109.5px;
+
+    .button-next{
+        outline: none;
+        background: transparent !important;
+        border-radius: 50%;
+        width: 4.5rem;
+        height: 4.5rem;
+        display: inline-block;
+        margin: 0 auto;
+        cursor: pointer;
+        padding: 0.75rem;
+    }
+
+}
