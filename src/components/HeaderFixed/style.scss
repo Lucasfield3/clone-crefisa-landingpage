@@ -1,16 +1,18 @@
 .header-fixed-container {
-
     background: #38bfe4;
-    display: flex;
-    justify-content: space-between;
     padding: 0 12rem;
     width: 100%;
-
+    height: 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
     :first-child{
-        height: 6rem;
         display: flex;
         align-items: center;
+
+        &:last-child{
+            height: 100%;
+        }
 
         .custom-img{
             padding-left: 0rem;
@@ -27,9 +29,11 @@
         .drop-container{
             display: flex;
             flex-direction: column;
+            height:auto;
             
             a{
                 transition: color 0.2s ease-in-out;
+                height: 6rem;
             }
             &:hover > a{
                 color:#38bfe4;
@@ -44,19 +48,23 @@
     }
 
     a {
-        height: 6rem;
-        line-height: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        height:100%;
         color:#fff;
         text-decoration: none;
         font-size: 1.5rem;
         padding:0 2rem;
         font-weight: 400;
+        line-height: 2rem;
     }
 
 
 
     :nth-child(2){
         display: flex;
+        justify-self: flex-end;
 
         :first-child{
             
@@ -72,6 +80,10 @@
         }
 
         :nth-child(2){
+            
+            div{
+                padding-top: 1rem;
+            }
             a{
                 display: flex;
                 gap: 0.4rem;

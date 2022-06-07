@@ -1,6 +1,5 @@
 .slider-container{
-    background:linear-gradient( to top, rgba(0, 84, 128, 0.3) 0%, transparent 80%, transparent 100% );
-    height:48rem;
+    height: 47.8rem;
     width: 100%;
     position: relative;
     display:flex;
@@ -15,7 +14,10 @@
        
     
         .slide{
-            position:absolute;
+            position: absolute;
+            width: 100%;
+            display: flex;
+            flex-direction: column-reverse;
             
             &::after{
                 content:'';
@@ -24,7 +26,7 @@
                 left: 0;
                 top: 0;
                 width: 100% !important;
-                height: 99.1% !important;
+                height: 100% !important;
                 z-index: 1;
                 background: -webkit-gradient( linear, left bottom, left top, from(rgba(0, 84, 128, 0.3)), color-stop(80%, transparent), to(transparent) );
                 background: linear-gradient( to top, rgba(0, 84, 128, 0.3) 0%, transparent 80%, transparent 100% );
@@ -32,16 +34,12 @@
 
             img{
                 width: 100%;
-                height: 48rem;
             }
 
             div {
                 position: absolute;
-                width: 50%;
+                width: fit-content;
                 display: flex;
-                justify-content: start;
-                height: 100%;
-                align-items: self-end;
                 padding-bottom: 5.6rem;
                 padding-left: 12rem;
                 overflow: auto;

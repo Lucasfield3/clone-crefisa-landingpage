@@ -47,7 +47,7 @@ export const HeaderFixed = () =>{
                 </div>
                 <div  onMouseLeave={()=>setIsShown3(false) } className="drop-container">
                     <Link onMouseEnter={()=>setIsShown3(true) } to='#'>Acessar <MdLockOutline size={20} color={isShown3 ? '#38bfe4' : '#fff'}/></Link>
-                    <DropMenu transform={'translate(-5rem, 6rem)'} isOver={isShown3}>
+                    <DropMenu transform={'translate(-5.2rem, 6rem)'} isOver={isShown3}>
                         <li>Conta Pessoa Jurídica</li>
                         <li>Empréstimo Online</li>
                         <li>Renegocie sua Dívida</li>
