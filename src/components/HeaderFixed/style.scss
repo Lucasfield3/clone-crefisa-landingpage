@@ -6,6 +6,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 
+    
+
     :first-child{
         display: flex;
         align-items: center;
@@ -103,3 +105,22 @@
         height: 4rem !important;
     }
 }
+
+.fix{
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    background-color: rgba(35, 185, 226, .9);
+    animation: fading 0.3s;
+    -webkit-animation: fading 0.3s;
+}
+
+@keyframes fading {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+

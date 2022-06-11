@@ -3,16 +3,27 @@ import { MdSearch, MdLockOutline } from 'react-icons/md'
 import logo from '../../assets/images/Logo.png'
 import './style.scss'
 import { DropMenu } from '../DropMenu'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export const HeaderFixed = () =>{
     const [ isShown, setIsShown ] = useState(false)
     const [ isShown2, setIsShown2 ] = useState(false)
     const [ isShown3, setIsShown3 ] = useState(false)
+    const [ isShowingMenu, setIsShowingMenu ] = useState(false)
+
+    useEffect(()=>{
+        window.addEventListener('scroll', ()=>{
+            if(window.scrollY > 284){
+                setIsShowingMenu(true)
+            }else {
+                setIsShowingMenu(false)
+            }
+        })
+    }, [])
 
 
      return(
-          <div className='header-fixed-container'>
+          <div className={`header-fixed-container ${isShowingMenu ? 'fix' : ''}`}>
             <div>
                 <Link className="custom-img" to='#'><img src={logo} alt='logo' /></Link>
                 <div onMouseLeave={()=> setIsShown(false)} className='drop-container'>

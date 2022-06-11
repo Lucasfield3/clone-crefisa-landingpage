@@ -1,4 +1,5 @@
 
+import { Adress } from '../../components/Adress'
 import { Header } from '../../components/Header'
 import { HeaderFixed } from '../../components/HeaderFixed'
 import { Products } from '../../components/Products'
@@ -14,6 +15,7 @@ export const Home = () =>{
                <Slider/>
                <div className='warning'><p>Atenção! A Crefisa não cobra nenhum tipo de taxa ou antecipação para liberação de crédito.</p></div>
                <Products/>
+               <Adress/>
           </div>
      )
 

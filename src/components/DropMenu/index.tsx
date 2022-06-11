@@ -15,6 +15,7 @@ export const DropMenu = ( props:Props) =>{
               zIndex:props.isOver ? '999': '-1',
               opacity: props.isOver ? 1 : 0,
               transform:props.transform,
+              display:props.isOver ? 'block' : 'none'
               }} className='drop-menu'>
               <ul>
                   {props.children}
