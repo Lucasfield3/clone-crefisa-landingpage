@@ -54,7 +54,7 @@ export const HeaderFixed = () =>{
             <div>
 
                 <div>
-                    <Link to='#'><MdSearch size={25} color='#fff'/> O que procura?</Link>
+                    <Link to='#'><MdSearch size={25} style={{color:'#fff !important'}} color='#fff'/> O que procura?</Link>
                 </div>
                 <div  onMouseLeave={()=>setIsShown3(false) } className="drop-container">
                     <Link onMouseEnter={()=>setIsShown3(true) } to='#'>Acessar <MdLockOutline size={20} color={isShown3 ? '#38bfe4' : '#fff'}/></Link>

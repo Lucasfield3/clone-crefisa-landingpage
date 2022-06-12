@@ -4,6 +4,7 @@ import { Header } from '../../components/Header'
 import { HeaderFixed } from '../../components/HeaderFixed'
 import { Products } from '../../components/Products'
 import { Slider } from '../../components/Slider'
+import { Whatsapp } from '../../components/Whatsapp'
 import './style.scss'
 
 export const Home = () =>{
@@ -16,6 +17,7 @@ export const Home = () =>{
                <div className='warning'><p>Atenção! A Crefisa não cobra nenhum tipo de taxa ou antecipação para liberação de crédito.</p></div>
                <Products/>
                <Adress/>
+               <Whatsapp/>
           </div>
      )
 
