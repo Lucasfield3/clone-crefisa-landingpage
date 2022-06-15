@@ -44,6 +44,12 @@ export const Products = () =>{
                   }
                 }} id="slider"  className='slider'>
                   <div className='product'>
+                    <img src="https://www.crefisa.com.br/wp-content/uploads/2019/05/crédito-pessoal-min-2-380x380.jpg" alt="image" />
+                    <h3>Empréstimo Pessoal</h3>
+                    <p><strong>Faça seu empréstimo</strong> e receba no mesmo dia! Dinheiro rápido, mesmo se estiver negativado. </p>
+                    <ButtonSlide style={{background:'#fdb913', color:'#fff', height: '4.8rem', padding: '0 2.8rem'}} frase='FAÇA SEU EMPRÉSTIMO'/>
+                  </div>
+                  <div className='product'>
                     <img src="https://www.crefisa.com.br/wp-content/uploads/2020/10/660_x_560px_Pag-Consignado-380x380.jpg" alt="image" />
                     <h3>Empréstimo Consignado</h3>
                     <p>Faça seu Empréstimo Consignado na Crefisa. Dinheiro rápido, melhores taxas e até 84x para pagar.</p>
@@ -79,12 +85,7 @@ export const Products = () =>{
                     <p><strong>Renegocie sua dívida </strong>com a Crefisa e volte a ter dinheiro na mão. Aproveite as condições!</p>
                     <ButtonSlide style={{background:'#fdb913', color:'#fff', height: '4.8rem', padding: '0 2.8rem'}} frase='RENEGOCIAR MINHA DÍVIDA'/>
                   </div>
-                  <div className='product'>
-                    <img src="https://www.crefisa.com.br/wp-content/uploads/2019/05/crédito-pessoal-min-2-380x380.jpg" alt="image" />
-                    <h3>Empréstimo Pessoal</h3>
-                    <p><strong>Faça seu empréstimo</strong> e receba no mesmo dia! Dinheiro rápido, mesmo se estiver negativado. </p>
-                    <ButtonSlide style={{background:'#fdb913', color:'#fff', height: '4.8rem', padding: '0 2.8rem'}} frase='FAÇA SEU EMPRÉSTIMO'/>
-                  </div>
+                 
                 </div>
               </div>
               <ButtonNext top="62%" width="90%"  color="#cfcfcf" onClick={()=> setAddTranslate(!addTranslate)}/>

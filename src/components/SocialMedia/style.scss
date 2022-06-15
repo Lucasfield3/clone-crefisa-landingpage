@@ -1,0 +1,68 @@
+.socialMedia-container{
+    display: flex;
+    padding: 0 12rem;
+    background: #007bff;
+    gap: 14rem;
+    
+
+    .image-section{
+        display:flex;
+        gap: 2rem;
+
+        div{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        img{
+            width:26rem;
+            object-fit: cover;
+        }
+    }
+
+    div:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+
+        h3{
+            font-size: 1.7rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            font-weight: 100;
+            letter-spacing: 0.8px;
+        }
+
+        h2{
+            
+            font-size: 5.7rem;
+            color: #fff;
+            font-weight: normal;
+            margin-bottom: 1rem;
+            line-height: 1;
+            padding-top: 1rem;
+            width: 47rem;
+            padding-right: 4rem;
+        }
+        
+        span{
+            width: 4.5rem;
+            height: 4.5rem;
+            border: 1px solid #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        div{
+            display: flex;
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+    }
+}
