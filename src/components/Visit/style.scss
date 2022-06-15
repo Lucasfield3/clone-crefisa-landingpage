@@ -1,0 +1,138 @@
+.visit-container{
+    height: 41.5rem;
+    width: 100%;
+    background: #007bff;
+    display: flex;
+  
+  
+    .image{
+        background-image: url('../../assets/images/destaque-agende-uma-visita-min.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width:85rem;
+        height:100%;
+        background-position: center center;
+    }
+
+    .visit-info{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0 12rem 0 9rem;
+
+        >div{
+            width:50%;
+        }
+
+        h2{
+            font-size: 1.7rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            font-weight: 100;
+            letter-spacing: 0.8px;
+        }
+
+        h3{
+            font-size: 6rem;
+            color: #fff;
+            font-weight: normal;
+            margin-bottom: 1rem;
+            line-height: 1;
+            padding-top: 1rem;
+            padding-right: 2rem;
+        }
+
+        p{
+            font-size: 2rem;
+            line-height: 1.5;
+            width: 25rem;
+            color: #fff;
+        }
+
+        .form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            width:50%;
+            margin-top: 5rem;
+
+            .wrap-input{
+                display: flex;
+                flex-direction: column-reverse;
+                gap: 0;
+                height: 6rem;
+                width:100%;
+
+                span{
+                    color: #dee2e6;
+                    font-size: 1rem;
+                    transform: translateY(1rem);
+                    opacity: 0;
+                    transition:all 0.2s ease-in-out;
+                    cursor:default;
+                }
+
+                input{
+                    width: 100%;
+                    z-index: 2;
+                    padding: 0 1rem;
+                    height: 4rem;
+                    border-radius: 2px;
+                    border: 1px solid #dee2e6;
+                    font-size: 1.4rem;
+
+                    &:focus::placeholder{
+                        color:transparent;
+                    }
+
+                }
+
+                input:focus + span{
+                    transform: translateY(-0.6rem);
+                    opacity: 1;
+                }
+ 
+            }
+
+            >div{
+                display: flex;
+                gap: 2rem;
+            }
+            
+
+          
+
+            button{
+                width: 100%;
+                border: 1px #fff solid;
+                border-radius: 2px;
+                background: transparent;
+                color: #fff;
+                font-size: 1.1rem;
+                letter-spacing: 1.6px;
+                height: 3.8rem;
+                font-weight: 600;
+                transition: all 0.2s ease-in-out;
+                transition-property: opacity;
+                transition-duration: 0.3s;
+                transition-delay: 0.1s;
+                cursor: pointer;
+
+                &:hover{
+                    background:#fff;
+                    color:#fdb913;
+                    opacity: 0.8;
+                }
+
+                &:active{
+                    box-shadow:0 0 0 0.2rem rgb(248 249 250 / 50%);
+                    color:#000;
+                }
+            }
+        }
+    }
+    
+}
+

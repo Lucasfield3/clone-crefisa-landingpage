@@ -36,7 +36,6 @@ html,body{
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
 }
 
 
@@ -47,12 +46,13 @@ html {
 body {
     color:#29292e;
     height:100vh;
+    overflow-x: hidden;
 }
 
 
 
 body, input, button, textarea {
-    font:400 16px "Lato", sans-serif;
+    font:400 1.6rem "Lato", sans-serif;
     outline: none;
     background: #fff;
 }

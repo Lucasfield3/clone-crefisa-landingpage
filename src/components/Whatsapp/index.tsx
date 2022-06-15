@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { MdClose } from 'react-icons/md'
 import logo from '../../assets/images/whatsapp.svg'
 import './style.scss'
 import { IoClose } from "react-icons/io5";
@@ -16,7 +15,7 @@ export const Whatsapp = () =>{
          </div>
        
          <div className={`form-whatsapp ${!toggle ? 'disapear' : ''}`}>
-            <header>PREENCHA O FORMULÁRIO E CONTRATE O SEU EMPRÉSTIMO.</header>
+            <h2>PREENCHA O FORMULÁRIO E CONTRATE O SEU EMPRÉSTIMO.</h2>
             <div>
                 <input type="text" placeholder='Nome' />
                 <input type="text" placeholder='CPF' />
