@@ -1,17 +1,17 @@
+import { CSSProperties } from 'react';
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import './style.scss'
 
 type Props ={
-    top:string;
     color:string;
     onClick:()=>void;
-    width:string;
+    style:CSSProperties;
 }
 
-export const ButtonNext = ({color, onClick, top, width}:Props) =>{
+export const ButtonNext = ({color, onClick, style}:Props) =>{
 
      return(
-          <div style={{top:top, width:width}} className='arrow-next'>
+          <div style={style} className='arrow-next'>
               <button style={{border:`1px solid ${color}`}} onClick={onClick} className="button-next"><MdKeyboardArrowRight size={30} fontWeight='normal' color={color}/></button>
           </div>
      )

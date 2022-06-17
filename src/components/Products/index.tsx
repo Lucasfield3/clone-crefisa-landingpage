@@ -88,7 +88,7 @@ export const Products = () =>{
                  
                 </div>
               </div>
-              <ButtonNext top="62%" width="90%"  color="#cfcfcf" onClick={()=> setAddTranslate(!addTranslate)}/>
+              <ButtonNext style={{top:'62%', width:'90%'}} color="#cfcfcf" onClick={()=> setAddTranslate(!addTranslate)}/>
           </div>
      )
 

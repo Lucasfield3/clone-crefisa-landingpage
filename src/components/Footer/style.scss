@@ -1,0 +1,114 @@
+.footer-container{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+
+    .footer-menu{
+        display: flex;
+        border-bottom: 1px solid #dee2e6;
+        justify-content: space-between;
+        padding: 4rem 12rem 5rem 12rem;
+
+        div:not(div:first-child){
+            display: flex;
+            flex-direction: column;
+            gap:2rem;
+        }
+
+
+        .first-section{
+            display: flex;
+            flex-direction: column;
+            gap:2rem;
+
+
+            >div{
+                gap:0.8rem !important;
+
+                h5{
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                }
+               
+            }
+            
+            a{
+                font-size: 1.8rem;
+                color:#23b9e2;
+                font-weight:500;
+            }
+        }
+
+        p{
+            font-size: 1.1rem;
+            color:#555555;
+        }
+
+        div:last-child{
+            align-items: center;
+            gap: 1rem !important;
+        }
+
+        button{
+            transform: rotate(-90deg);
+        }
+    }
+
+    a{
+        font-size: 1.1rem;
+        text-decoration:none;
+        color:#888888;
+        width:fit-content;
+    }
+
+    h5{
+        font-size:1.8rem;
+        color:#555555;
+        font-weight: 500;
+    }
+
+    .infos{
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.7fr;
+        padding: 4.5rem 12rem 7rem 12rem;
+        letter-spacing: 0.5px;
+        gap: 3.5rem;
+
+        h5{
+            font-size: 1.4rem;
+            color:#23b9e2;
+            font-weight: 700;
+        }
+
+        >div{
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+
+            :nth-child(2){
+                font-size: 1.2rem;
+                color:#AAAAAA;
+                margin-bottom: 0.7rem;
+            }
+
+            :last-child{
+                font-size: 1.3rem;
+                color:#888888;
+            }
+        }
+
+        .last-info{
+            font-size: 1.3rem;
+            color:#888888;
+            line-height: 1.8;
+            letter-spacing: 0.5px;
+            margin-top: 3rem;
+
+            a{
+                color:#23b9e2;
+                text-decoration: underline;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

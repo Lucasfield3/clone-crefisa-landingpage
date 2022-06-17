@@ -147,7 +147,7 @@ export const Slider = () =>{
                   </li>
               </ul>
       
-                <ButtonNext top="51%" width="100%" color="#ffffff"  onClick={()=> setNextButton(nextButton + 1)}/>
+                <ButtonNext style={{top:'51%', width:'100%'}} color="#ffffff"  onClick={()=> setNextButton(nextButton + 1)}/>
                 <div id="container-slide" className="container-slide-buttons">
                     {slidesButtonsArray.map((index)=>{
                         return (
