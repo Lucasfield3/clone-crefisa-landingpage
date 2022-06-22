@@ -22,10 +22,12 @@
 
         :not(:first-child):not(div):not(li){
             transition: color 0.2s ease-in-out;
-            &:hover{
-                color:#38bfe4;
-                background:#fff;
-            }
+            
+                &:hover{
+                    color:#38bfe4;
+                    background:#fff;
+                }
+            
         }
         
        
@@ -82,9 +84,9 @@
             }
 
             
-            path{
-                color:#fff !important;
-            }
+            // path{
+            //     color:#fff;
+            // }
 
          
         }
@@ -134,3 +136,42 @@
     }
 }
 
+@media only screen and (max-width: 964px) {
+    .header-fixed-container :nth-child(2) div:first-child a{
+        margin-right: 0rem;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    .header-fixed-container :nth-child(2) div:first-child a{
+        margin-right: 0rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        transition: color 0.2s ease-in-out;
+    }
+
+    .drop-container{
+        height:100%;
+        &:hover > a{
+            color: #38bfe4;
+            background: #fff;
+        }
+
+        .drop-menu{
+            padding-top: 1rem;
+        }
+    }
+
+    .header-fixed-container .icons-match{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        margin-left: 2rem;
+
+        path{
+            color:#fff !important;
+        }
+    }
+  }

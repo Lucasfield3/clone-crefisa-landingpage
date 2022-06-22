@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { MatchProvider } from './context/Match'
 import { Home } from './pages/Home'
 import './styles/global.scss'
 
@@ -6,11 +7,13 @@ import './styles/global.scss'
 function App() {
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home/>}></Route>
-      </Routes>
-    </Router>
+      <MatchProvider>
+        <Router>
+            <Routes>
+              <Route path="/" element={<Home/>}></Route>
+            </Routes>
+        </Router>
+      </MatchProvider>
   )
 }
 
