@@ -65,7 +65,7 @@ export const Footer = ({toTheTop}:Props) =>{
                     <a href="javascript:void(0);">Abra Sua Conta I Crefisa</a>
                 </div>
                 <div>
-                    <ButtonNext style={{position:'unset', paddingRight:'unset'}}  color="cfcfcf" onClick={toTheTop}/>
+                    <ButtonNext style={{position:'unset', paddingRight:'unset'}}  color="#cfcfcf" onClick={toTheTop}/>
                     <p>Topo</p>
                 </div>
             </div>
