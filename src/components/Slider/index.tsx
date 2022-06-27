@@ -1,5 +1,6 @@
-import {  useEffect, useState } from 'react'
+import {  useContext, useEffect, useState } from 'react'
 import { MdKeyboardArrowRight } from 'react-icons/md'
+import { MatchContext } from '../../context/Match'
 import { ButtonNext } from '../ButtonNext'
 import { ButtonSlide } from '../ButtonSlide'
 import './style.scss'
@@ -8,6 +9,8 @@ export const Slider = () =>{
 
     const [ nextButton, setNextButton ] = useState(1)
     const [isLoaded, setIsLoaded] = useState(false)
+
+    const { match } = useContext(MatchContext)
 
     const slidesButtonsArray = [1,2,3,4,5]
 
@@ -108,6 +111,10 @@ export const Slider = () =>{
         handleDismissContainerSlideButtons()
     }, [isOver])
 
+    const handleImgSrc = (deviceImg:string, largeImg:string)=>{
+        return match ? deviceImg : largeImg
+    }
+
      return(
           <div className='slider-container'>
               <ul className='sliders'>
@@ -115,39 +122,78 @@ export const Slider = () =>{
                       <div>
                         <ButtonSlide frase='CONTRATE AGORA' style={{background:'#fdb913', color:'#fff'}}/>
                       </div>
-                    <img src="https://www.crefisa.com.br/wp-content/uploads/2022/05/site-novo.jpg" alt="logo" />
+                    <img
+                    src={
+                        handleImgSrc(
+                        'https://www.crefisa.com.br/wp-content/uploads/2022/06/360x520-site_Mobile-Junino-002.jpg', 
+                        'https://www.crefisa.com.br/wp-content/uploads/2022/06/1920x680-site_Junino.jpg'
+                        )
+                    } 
+                    alt="logo" 
+                    />
                   </li>
                   <li className="slide" id='2'>
                       <div>
                         <ButtonSlide frase='CONTRATE AGORA' style={{background:'#fdb913', color:'#fff'}}/>
                       </div>
-                      <img src="https://www.crefisa.com.br/wp-content/uploads/2022/03/1920x680-site_Dinheiro-Hora_.jpg" alt="logo" />
-
+                        <img 
+                        src={
+                            handleImgSrc(
+                            'https://www.crefisa.com.br/wp-content/uploads/2022/06/360_x_520-Crefisa_Shop_Banner-Mobile.jpg', 
+                            'https://www.crefisa.com.br/wp-content/uploads/2022/06/1920_x_680-Crefisa_Shop_Banner-Desktop.jpg'
+                            )
+                        } 
+                        alt="logo" 
+                        />
                     </li>
                   <li className="slide" id='3'>
                       <div>
                         <ButtonSlide frase='SAIBA MAIS' style={{background:'#178ac2', color:'#fff'}}/>
                       </div>
-                      <img src="https://www.crefisa.com.br/wp-content/uploads/2022/03/1920x680-site_Dinheiro-Hora.jpg" alt="logo" />
+                      <img 
+                        src={
+                            handleImgSrc(
+                            'https://www.crefisa.com.br/wp-content/uploads/2022/03/360x520-site_Mobile-Dinheiro-Hora-1.jpg', 
+                            'https://www.crefisa.com.br/wp-content/uploads/2022/03/1920x680-site_Dinheiro-Hora.jpg'
+                            )
+                        } 
+                        alt="logo" 
+                        />
 
                   </li>
                   <li className="slide" id='4'>
                       <div>
                         <ButtonSlide frase='SAIBA MAIS' style={{background:'#fdb913', color:'#fff'}}/>
                       </div>
-                      <img src="https://www.crefisa.com.br/wp-content/uploads/2022/04/COVER-SITE-1920_x680_INSS.jpg" alt="logo" />
+                      <img 
+                        src={
+                            handleImgSrc(
+                            'https://www.crefisa.com.br/wp-content/uploads/2022/04/COVER-SITE-360_x520_INSS.jpg', 
+                            'https://www.crefisa.com.br/wp-content/uploads/2022/04/COVER-SITE-1920_x680_INSS.jpg'
+                            )
+                        } 
+                        alt="logo" 
+                        />
 
                     </li>
                   <li className="slide" id='5'>
                       <div>
                         <ButtonSlide frase='SAIBA MAIS' style={{background:'#fdb913', color:'#fff'}}/>
                       </div>
-                      <img src="https://www.crefisa.com.br/wp-content/uploads/2022/03/Fique-Atento-Crefisa-banner-Home.jpg" alt="logo" />
+                      <img 
+                        src={
+                            handleImgSrc(
+                            'https://www.crefisa.com.br/wp-content/uploads/2022/03/Fique-Atento-Crefisa-banner-site-mobile.jpg', 
+                            'https://www.crefisa.com.br/wp-content/uploads/2022/03/Fique-Atento-Crefisa-banner-Home.jpg'
+                            )
+                        } 
+                        alt="logo" 
+                        />
 
                   </li>
               </ul>
       
-                <ButtonNext style={{top:'51%', width:'100%'}} color="#ffffff"  onClick={()=> setNextButton(nextButton + 1)}/>
+               {!match && <ButtonNext style={{top:'51%', width:'100%'}} color="#ffffff"  onClick={()=> setNextButton(nextButton + 1)}/>}
                 <div id="container-slide" className="container-slide-buttons">
                     {slidesButtonsArray.map((index)=>{
                         return (

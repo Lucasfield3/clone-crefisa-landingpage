@@ -18,14 +18,13 @@
             flex-direction: column-reverse;
             height: 0;
             
-            &::after{
+            &::before{
                 content:'';
                 position: absolute;
                 display: block;
-                left: 0;
-                top: 0;
                 width: 100% !important;
-                height: 100% !important;
+                height: 0 !important;
+                padding-top: 35.43%;
                 z-index: 1;
                 background: -webkit-gradient( linear, left bottom, left top, from(rgba(0, 84, 128, 0.3)), color-stop(80%, transparent), to(transparent) );
                 background: linear-gradient( to top, rgba(0, 84, 128, 0.3) 0%, transparent 80%, transparent 100% );
@@ -94,5 +93,32 @@
         }
 
         
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .slider-container{
+        padding-top: 144.43%;
+    
+
+    .slide{
+
+        &::before{
+            padding-top: 144.43% !important;
+        }
+
+        div{
+            padding-left: 0 !important;
+            width: 100% !important;
+            justify-content:center;
+
+            .button-slide{
+                width: 100% !important;
+                margin: 0 12rem;
+                margin-bottom: 7rem;
+            }
+        }
+    }
+
     }
 }
