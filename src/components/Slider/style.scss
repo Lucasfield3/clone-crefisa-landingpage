@@ -30,8 +30,9 @@
                 background: linear-gradient( to top, rgba(0, 84, 128, 0.3) 0%, transparent 80%, transparent 100% );
             }
 
-            img{
+            :nth-child(2){
                 width: 100%;
+                display: none;
             }
 
             div {
@@ -96,16 +97,35 @@
     }
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width:900px){
+    .button-slide{
+        height: 3.4rem;
+        padding: 0 4.8rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 767px){
     .slider-container{
         padding-top: 144.43%;
     
+        .arrow-next{
+            display: none;
+        }
 
     .slide{
 
         &::before{
             padding-top: 144.43% !important;
         }
+
+        :nth-child(2){
+            display: block !important;
+        }
+        :nth-child(3){
+            display: none;
+        }
+
 
         div{
             padding-left: 0 !important;

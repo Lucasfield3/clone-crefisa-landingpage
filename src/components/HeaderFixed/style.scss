@@ -6,6 +6,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 
+    .icons-match{
+        display: none;
+    }
     
 
     :first-child{
@@ -113,6 +116,13 @@
     img{
         width: 9rem;
         height: 4rem !important;
+    }
+
+    #last-drop-menu{
+
+        > div{
+            transform:translate(-5rem, 5.9rem);
+        }
     }
 }
 

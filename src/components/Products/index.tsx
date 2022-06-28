@@ -9,12 +9,16 @@ export const Products = () =>{
   const [ addTranslate, setAddTranslate ] = useState(false)
   const slider = document.querySelector<HTMLElement>('#slider')
   const carousel = document.querySelector<HTMLElement>('#carousel')
+  const product = document.querySelectorAll<HTMLElement>('.product')
 
   const handleCarousel = ()=>{
 
     if(slider){
+      const style = getComputedStyle(product[0])
+ 
       carousel!.style.justifyContent = 'flex-start';
-      slider.style.transform = `translate(-25%)`
+      slider.style.transform = `translate(-${style.flexBasis})`
+      
     }
     
   }
