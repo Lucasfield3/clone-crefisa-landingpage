@@ -16,7 +16,7 @@ export const MatchProvider = ({children}: MatchProviderProps) =>{
 
     const handleMatch = ()=>{
         if(window){
-            const checkMedia = window.matchMedia('(max-width:900px)')
+            const checkMedia = window.matchMedia('(max-width:767px)')
             if(!match){
                 if(checkMedia.matches){
                     setMatch(checkMedia.matches)
