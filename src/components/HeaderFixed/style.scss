@@ -39,6 +39,7 @@
             display: flex;
             flex-direction: column;
             height:auto;
+            animation: fading 0.3s;
 
             
             a{
@@ -110,6 +111,8 @@
                 color:#38bfe4;
                 background:#fff;
             }
+
+          
         }
     }
 
@@ -124,6 +127,77 @@
             transform:translate(-5rem, 5.9rem);
         }
     }
+
+    .icon-close{
+        display: flex;
+        align-items:center;
+        cursor: pointer;
+        height:5rem;
+
+        p{
+            font-size:1.2rem;
+            color:#fff;
+        }
+    }
+    
+}
+
+.search-bar{
+    position: absolute;
+    z-index: 900;
+    display: grid;
+    background-color: rgba(35, 185, 226, 0.95);
+    width: 100%;
+    animation: fading 0.3s;
+    padding: 0 12rem;
+    grid-template-columns: 1fr 1.7fr;
+    height: auto;
+    padding-bottom: 2rem;
+
+    div{
+        display: flex;
+
+        h1{
+            font-size: 6rem;
+            display: flex;
+            align-items: self-start;
+            padding-top: 2rem;
+            color:#fff;
+            font-weight:100;
+        }
+        span{
+            display: none;
+            justify-content: center;
+            align-items: center;
+            border: 0.6px solid rgba(255, 255, 255, 0.3);
+            height: 3.5rem;
+            width: 3.5rem;
+            border-radius: 2px;
+        }
+
+    }
+
+    
+
+    input{
+        border: none;
+        background: transparent;
+        font-size: 5rem;
+        color: #fff;
+        padding-bottom: 3.5rem;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+.overlay{
+    position: absolute;
+    z-index: 899 !important;
+    background-color: #000 !important;
+    opacity: 0.4;
+    height: 100vh;
+    width: 100%;
+    animation: unset !important;
 }
 
 .fix{
@@ -179,9 +253,53 @@
         align-items: center;
         gap: 1.5rem;
         margin-left: 2rem;
+        animation: fading 0.3s;
+        
 
         path{
             color:#fff !important;
         }
     }
   }
+
+
+  @media only screen and (max-width: 767px) {
+    .search-bar{
+        display: flex;
+        flex-direction: column;
+
+        div{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            h1{
+                font-size: 4rem;
+                padding-top: 0rem;
+            }
+
+            span{
+                display: flex !important;
+            }
+
+        }
+
+        input{
+            font-size:4rem;
+            padding-top: 1.5rem;
+            text-align: center;
+        }
+    }
+  }
+
+.disapear{
+    display: none !important;
+}
+
+@keyframes fading {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

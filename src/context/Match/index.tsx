@@ -37,6 +37,8 @@ export const MatchProvider = ({children}: MatchProviderProps) =>{
 
     useEffect(()=>{
         handleMatch()
+        console.log(match);
+        
     },[match])
 
      return(

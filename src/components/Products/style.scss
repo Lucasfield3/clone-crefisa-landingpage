@@ -31,6 +31,11 @@
                 gap: 1rem;
                 padding-right: 2rem;
                 justify-content: space-between;
+
+                .reverse-order{
+                    display: flex;
+                    flex-direction: column;
+                }
                 
                 img{
                     border-radius: 4px;
@@ -154,4 +159,15 @@
         display: flex !important;
     }
 
+    header{
+        margin-bottom:0 !important;
+        h1{
+            display:none;
+        }
+    }
+
+    .reverse-order{
+        display: flex;
+        flex-direction:column-reverse !important;
+    }
  }
