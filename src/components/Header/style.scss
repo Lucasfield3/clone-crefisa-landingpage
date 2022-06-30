@@ -1,17 +1,19 @@
 .header-container {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     height: 4.5rem;
-    align-items: center;
     background: #1bafd8;
-    padding: 0 12rem;
 
-    > div{
-        display:flex;
-        height:100%;
+    .content{
+        display: flex;
+        height: 100%;
+        width: 100%;
         align-items: center;
-        a {
+        padding: 0 12rem;
+        justify-content: space-between;
+
+        div a {
             height: 4.5rem;
             line-height: 4.5rem;
             color:#fff;
@@ -20,22 +22,48 @@
             letter-spacing: 1.8px;
             margin-right: 3rem;
             font-weight: 600;
+            padding: 1.7rem 0;
+        }
+        :nth-child(2){
+            :not(:first-child){
+                background-color: #fdb913;
+                padding: 1.7rem 2.5rem;
+                margin-right: 0 !important;
+            }
         }
     }
 
-    :nth-child(2){
-        :not(:first-child){
-            background-color: #fdb913;
-            padding: 0 2.5rem;
-            margin-right: 0 !important;
-        }
-    }
 
 }
 
 @media only screen and (max-width:900px){
     .header-container > div a{
         margin-right:0rem;
+    }
+
+    .header-container {
+
+        .content{
+            :nth-child(2){
+                :not(:first-child){
+                    background-color: transparent;
+                    padding: 1.7rem 0;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width:767px){
+    .header-container {
+        
+        .content{
+            width:80%;
+            margin:0 auto;
+            padding: 0 1rem;
+        }
+
     }
 
 }

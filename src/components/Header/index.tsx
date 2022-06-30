@@ -6,6 +6,7 @@ export const Header = () =>{
 
      return(
           <div  className='header-container'>
+             <div className="content">
               <div>
                 <Link to="#">ATENDIMENTO</Link>
                 <Link className="disappear" to="#">INSTITUCIONAL</Link>
@@ -15,6 +16,7 @@ export const Header = () =>{
                 <Link className="disappear" to="#">ABRA SUA CONTA</Link>
                 <Link to="#">FAÇA SEU EMPRÉSTIMO</Link>
               </div>
+             </div>
           </div>
      )
 
