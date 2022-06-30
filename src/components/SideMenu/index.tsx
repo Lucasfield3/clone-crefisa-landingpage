@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { MdClose, MdKeyboardArrowRight, MdSearch } from 'react-icons/md'
+import { MdClose, MdKeyboardArrowLeft, MdKeyboardArrowRight, MdSearch } from 'react-icons/md'
 import { ButtonSlide } from '../ButtonSlide'
 import './style.scss'
 
@@ -39,6 +39,36 @@ export const SideMenu = () =>{
                 <li>Blog</li>
                 <li>Crefisa Shop</li>
             </ul>
+
+            <div className="side-side-menu">
+                <div>
+                    <MdKeyboardArrowLeft size={30} fontWeight='normal'/>
+                    <p>Voltar</p>
+                </div>
+                <ul>
+                    <li>Empréstimo Pessoal</li>
+                    <li>Empréstimo Consignado</li>
+                    <li>Antecipação de Benefício</li>
+                    <li>Agente Crefisa</li>
+                    <li>Conta-Corrente</li>
+                    <li>Cartão Pré-Pago</li>
+                    <li>Benefício do INSS</li>
+                    <li>Renegociação de Dívidas</li>
+                    <li>Câmbio Crefisa</li>
+                    <li>Pix</li>
+                    <li>Whatsapp Crefisa</li>
+                </ul>
+            </div>
+            <div className="side-side-menu">
+                <div>
+                    <MdKeyboardArrowLeft size={30} fontWeight='normal'/>
+                    <p>Voltar</p>
+                </div>
+                <ul>
+                    <li>Antecipação de Recebíveis</li>
+                    <li>CrefisaPay</li>
+                </ul>
+            </div>
          </div>
      )
 
