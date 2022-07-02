@@ -65,3 +65,14 @@ body, input, button, textarea {
         display: block !important;
     }
 }
+
+.fix{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(35, 185, 226, .9);
+    animation: fading 0.3s;
+    -webkit-animation: fading 0.3s;
+}

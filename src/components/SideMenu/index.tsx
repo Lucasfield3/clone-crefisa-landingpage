@@ -1,73 +1,112 @@
-import { useState } from 'react'
-import { MdClose, MdKeyboardArrowLeft, MdKeyboardArrowRight, MdSearch } from 'react-icons/md'
+import { useEffect, useState } from 'react'
+import { MdClose, MdKeyboardArrowLeft, MdKeyboardArrowRight , MdSearch } from 'react-icons/md'
 import { ButtonSlide } from '../ButtonSlide'
 import './style.scss'
 
-export const SideMenu = () =>{
-    const [ isShowingSideMenu, setIsShowingSideMenu ] = useState(false)
+
+type Props = {
+    onClickSideMenu: () => void;
+    isShowingSideMenu:boolean;
+    isShowingMenu:boolean;
+}
+
+export const SideMenu = ({
+    onClickSideMenu,
+    isShowingSideMenu,
+    isShowingMenu 
+}:Props) =>{
+
+
+    const [ isShowingSideSideMenu, setIsShowingSideSideMenu ] = useState(false)
+    const [ isShowingSideSideMenu2, setIsShowingSideSideMenu2 ] = useState(false)
+    const sideMenu = document.querySelector<HTMLElement>('.side-menu-container')
+    useEffect(() =>{
+        if(sideMenu){
+            if(!isShowingSideSideMenu){
+                sideMenu.scroll(0, 0);
+            }
+        }
+    }, [isShowingSideSideMenu])
 
      return(
-         <div className='side-menu-container'>
+         <div 
+         className={`side-menu-container ${isShowingSideMenu ? 'show' : ''} ${(isShowingMenu) ? 'fix' : ''}`}
+         style={{overflowY:isShowingSideSideMenu ? 'auto' : 'hidden'}}
+         
+         >
             <header>
                 <h3>Menu</h3>
-                <div onClick={()=> setIsShowingSideMenu(!isShowingSideMenu)} className={`icon-close ${!isShowingSideMenu ? 'disapear' : ''}`}>
+                <div onClick={onClickSideMenu} className='icon-close'>
                     <p>Fechar</p>
-                    <MdClose color='#fff' size={25}/>
+                    <MdClose fontSize={20} color='#fff' size={24}/>
                 </div>
             </header>
 
-            <div>
-                <div>
-                    <input type="text" placeholder='Busque por um produto...' />
-                    <MdSearch size={25} color='#fff'/>
-                </div>
-                <ButtonSlide style={{background:'#fdb913', color:'#fff', height: '4.8rem', padding: '0 2.8rem'}} frase='FAZER MEU EMPRÉSTIMO'/>
-            </div>
-            <ul>
-                <li>
-                    <p>Para você</p>
-                    <MdKeyboardArrowRight size={30} fontWeight='normal'/>
-                </li>
-                <li>
-                    <p>Para sua empresa</p>
-                    <MdKeyboardArrowRight size={30} fontWeight='normal'/>
-                </li>
-                <li>Beneficiários INSS</li>
-                <li>Institucional</li>
-                <li>Atendimento</li>
-                <li>Agende uma visita</li>
-                <li>Blog</li>
-                <li>Crefisa Shop</li>
-            </ul>
+            <div className='main'>
 
-            <div className="side-side-menu">
                 <div>
-                    <MdKeyboardArrowLeft size={30} fontWeight='normal'/>
-                    <p>Voltar</p>
+                    <div className='search-bar-side-menu'>
+                        <input type="text" placeholder='Busque por um produto...' />
+                        <MdSearch size={25} color={'#8f8f8f'}/>
+                    </div>
+                    <ButtonSlide style={{
+                        background:'#fdb913', 
+                        color:'#fff', 
+                        height:'3.8rem', 
+                        padding: '0 2.8rem',
+                        letterSpacing:'0.2px',
+                        width:'100%'
+                        }} 
+                        frase='FAZER MEU EMPRÉSTIMO'
+                        />
                 </div>
+
                 <ul>
-                    <li>Empréstimo Pessoal</li>
-                    <li>Empréstimo Consignado</li>
-                    <li>Antecipação de Benefício</li>
-                    <li>Agente Crefisa</li>
-                    <li>Conta-Corrente</li>
-                    <li>Cartão Pré-Pago</li>
-                    <li>Benefício do INSS</li>
-                    <li>Renegociação de Dívidas</li>
-                    <li>Câmbio Crefisa</li>
-                    <li>Pix</li>
-                    <li>Whatsapp Crefisa</li>
+                    <li onClick={()=> setIsShowingSideSideMenu(!isShowingSideSideMenu)}>
+                        <a>Para você</a>
+                        <MdKeyboardArrowRight color='#aaaaaa' size={18} fontWeight='normal'/>
+                    </li>
+                    <li onClick={()=> setIsShowingSideSideMenu2(!isShowingSideSideMenu2)}>
+                        <a>Para sua empresa</a>
+                        <MdKeyboardArrowRight color='#aaaaaa' onClick={()=> setIsShowingSideSideMenu2(!isShowingSideSideMenu2)} size={18} fontWeight='normal'/>
+                    </li>
+                    <li><a>Beneficiários INSS</a></li>
+                    <li><a>Institucional</a></li>
+                    <li><a>Atendimento</a></li>
+                    <li><a>Agende uma visita</a></li>
+                    <li><a>Blog</a></li>
+                    <li><a>Crefisa Shop</a></li>
                 </ul>
-            </div>
-            <div className="side-side-menu">
-                <div>
-                    <MdKeyboardArrowLeft size={30} fontWeight='normal'/>
-                    <p>Voltar</p>
+
+                <div className={`side-side-menu ${isShowingSideSideMenu ? 'show-side-side' : ''}`}>
+                    <div>
+                        <MdKeyboardArrowLeft  color={'#aaaaaa'} size={18} fontWeight='normal'/>
+                        <p onClick={()=> setIsShowingSideSideMenu(!isShowingSideSideMenu)}>Voltar</p>
+                    </div>
+                    <ul>
+                        <li><a>Empréstimo Pessoal</a></li>
+                        <li><a>Empréstimo Consignado</a></li>
+                        <li><a>Antecipação de Benefício</a></li>
+                        <li><a>Agente Crefisa</a></li>
+                        <li><a>Conta-Corrente</a></li>
+                        <li><a>Cartão Pré-Pago</a></li>
+                        <li><a>Benefício do INSS</a></li>
+                        <li><a>Renegociação de Dívidas</a></li>
+                        <li><a>Câmbio Crefisa</a></li>
+                        <li><a>Pix</a></li>
+                        <li><a>Whatsapp Crefisa</a></li>
+                    </ul>
                 </div>
-                <ul>
-                    <li>Antecipação de Recebíveis</li>
-                    <li>CrefisaPay</li>
-                </ul>
+                <div className={`side-side-menu ${isShowingSideSideMenu2 ? 'show-side-side' : ''}`}>
+                    <div>
+                        <MdKeyboardArrowLeft  color={'#aaaaaa'} size={18} fontWeight='normal'/>
+                        <p onClick={()=> setIsShowingSideSideMenu2(!isShowingSideSideMenu2)}>Voltar</p>
+                    </div>
+                    <ul>
+                        <li><a>Antecipação de Recebíveis</a></li>
+                        <li><a>CrefisaPay</a></li>
+                    </ul>
+                </div>
             </div>
          </div>
      )
