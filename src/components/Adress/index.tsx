@@ -11,6 +11,7 @@ export const Adress = () =>{
 
      return(
           <div className='adress-container'>
+            <div className="content">
               <div>
                   <h3>Pontos de Atendimento</h3>
                   <h2>Mais de 1.000 pontos de atendimento para você!</h2>
@@ -63,6 +64,7 @@ export const Adress = () =>{
                       <ButtonSlide style={{background:'#fdb913', color:'#fff', height: '4.8rem', padding: '0 2.8rem'}} frase='PESQUISAR LOCAIS'/>
                   </div>
               </div>
+            </div>
           </div>
      )
 

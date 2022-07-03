@@ -136,3 +136,29 @@
     
 }
 
+
+
+@media only screen and (max-width:1085px){
+    .visit-container .visit-info{
+        margin: 0 12rem 0 4rem;
+
+        p{
+            width: 100%;
+            padding-right: 1rem;
+        }
+    }
+    
+}
+
+
+@media only screen and (max-width:900px){
+    .visit-container .visit-info{
+        margin: 0 4rem 0 4rem;
+
+    }
+
+    .visit-container .image {
+        width: 59rem;
+    }
+    
+}
