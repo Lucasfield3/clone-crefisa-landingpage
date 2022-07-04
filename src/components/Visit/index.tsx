@@ -8,14 +8,14 @@ export const Visit = () =>{
     const { match } = useContext(MatchContext)
 
      return(
-         <div className='visit-container'>
-            <div className={`image ${toggle ? 'isOffset' : ''}`}></div>
-            <div className={`visit-info ${toggle ? 'appear-info' : ''}`}>
+         <div style={{height:toggle && '32rem'}} className='visit-container'>
+            <div className={`image ${toggle && 'isOffset'}`}></div>
+            <div className={`visit-info ${toggle && 'appear-info'}`}>
                 <div className={`wrap-info`}>
                     <h2>Faça seu empréstimo</h2>
-                    <h3 className={`${toggle ? 'disappear' : ''}`}>Agende uma visita</h3>
-                    <p className={`${toggle ? 'disappear' : ''}`}>Agende uma visita agora, faça seu empréstimo e tenha dinheiro rápido!</p>
-                    <button onClick={()=> setToggle(!toggle)} className={`${toggle ? 'disappear' : ''}`}>AGENDAR VISITA</button>
+                    <h3 className={`${toggle && 'disapear'}`}>Agende uma visita</h3>
+                    <p className={`${toggle && 'disapear'}`}>Agende uma visita agora, faça seu empréstimo e tenha dinheiro rápido!</p>
+                    <button onClick={()=> setToggle(!toggle)} className={`${toggle && 'disapear'}`}>AGENDAR VISITA</button>
                 </div>
                 <div className={`form ${toggle && 'appear-form'}`}>
                     <div>
