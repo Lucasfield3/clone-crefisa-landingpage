@@ -1,17 +1,23 @@
+import { useContext, useState } from 'react'
+import { MatchContext } from '../../context/Match'
 import './style.scss'
 
 export const Visit = () =>{
 
+    const [ toggle, setToggle ] = useState(false)
+    const { match } = useContext(MatchContext)
+
      return(
          <div className='visit-container'>
-            <div className='image'></div>
-            <div className='visit-info'>
-                <div>
+            <div className={`image ${toggle ? 'isOffset' : ''}`}></div>
+            <div className={`visit-info ${toggle ? 'appear-info' : ''}`}>
+                <div className={`wrap-info`}>
                     <h2>Faça seu empréstimo</h2>
-                    <h3>Agende uma visita</h3>
-                    <p>Agende uma visita agora, faça seu empréstimo e tenha dinheiro rápido!</p>
+                    <h3 className={`${toggle ? 'disappear' : ''}`}>Agende uma visita</h3>
+                    <p className={`${toggle ? 'disappear' : ''}`}>Agende uma visita agora, faça seu empréstimo e tenha dinheiro rápido!</p>
+                    <button onClick={()=> setToggle(!toggle)} className={`${toggle ? 'disappear' : ''}`}>AGENDAR VISITA</button>
                 </div>
-                <div className='form'>
+                <div className={`form ${toggle && 'appear-form'}`}>
                     <div>
                         <div className='wrap-input'>
                             <input type="text" placeholder="Seu nome" />

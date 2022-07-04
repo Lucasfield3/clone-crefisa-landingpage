@@ -55,7 +55,7 @@
                 animation-timing-function: ease-in-out;
                 animation: fading 0.8s;
     
-                >div{
+                div:first-child{
                     display: grid;
                     grid-template-columns: 1fr 2fr;
                     gap: 2rem;
@@ -74,7 +74,7 @@
                     }
                 }
     
-                :last-child{
+                div:last-child{
                     grid-template-columns: 2fr 1fr !important;
     
                     input[type=number]::-webkit-inner-spin-button, 
@@ -142,7 +142,7 @@
                 }
             }
     
-            div:last-child:not(.form-adress) {
+            div:last-child{
                 
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -215,7 +215,8 @@
 
 @media only screen and(max-width:900px){
     .adress-container .content{
-        grid-template-rows: 1fr 1fr;
+        display: flex !important;
+        flex-direction: column;
         grid-template-columns: unset;
     }
 
@@ -234,9 +235,9 @@
         letter-spacing: 0.5px;
     }
 
-    .adress-container .content .adress-info div:last-child:not(.form-adress){
+    .adress-container .content .adress-info .buttons{
         grid-template-rows: 1fr 1fr;
-        grid-template-columns: unset;
+        grid-template-columns: unset !important;
     
         button:first-child{
             grid-row:2;

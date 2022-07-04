@@ -36,18 +36,19 @@ export const Products = () =>{
     }
   }
 
-  const handleBorder = ()=>{
-    for(let i = 0; i < slidesButtonsArray.length; i++){
-      if(document.readyState === 'complete'){
-        if(slidesButtons){
-          if(slidesButtons[i].id === String(nextProduct)){
-            slidesButtons[i].style.border = '1px solid #23b9e2'
+  const handleBorder = (id:string)=>{
+    if(slidesButtons){
+      for(const [, value] of Array.from(slidesButtons).entries()){
+        console.log(value);
+        
+          if(value.id === id){
+            value.style.border = '1px solid #23b9e2'
           }else{
-            slidesButtons[i].style.border = '0px solid #fff' 
+            value.style.border = '0px solid #fff' 
           }
-        }
+          
+      }
     }
-  }
   }
 
   useEffect(()=>{
@@ -62,8 +63,13 @@ export const Products = () =>{
 
   useEffect(()=>{
     handleSlide(String(nextProduct))
-    handleBorder()
+    handleBorder(String(nextProduct))
   }, [nextProduct])
+
+  useEffect(()=> {
+    handleSlide(String(nextProduct))
+    handleBorder(String(nextProduct))
+  }, [])
 
 
   useEffect(()=>{
