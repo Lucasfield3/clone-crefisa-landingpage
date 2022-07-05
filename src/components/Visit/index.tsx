@@ -8,7 +8,7 @@ export const Visit = () =>{
     const { match } = useContext(MatchContext)
 
      return(
-         <div style={{height:toggle && '32rem'}} className='visit-container'>
+         <div style={{minHeight:toggle && 'auto', height:toggle && 'auto'}} className='visit-container'>
             <div className={`image ${toggle && 'isOffset'}`}></div>
             <div className={`visit-info ${toggle && 'appear-info'}`}>
                 <div className={`wrap-info`}>

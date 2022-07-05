@@ -229,6 +229,16 @@
     
 }
 
+@media only screen and (max-width:700px){
+    .visit-container{
+        min-height:50rem;
+
+        .visit-info{
+            margin:0 0rem 0 4rem;
+        }
+    }
+}
+
 .isOffset{
     width:0rem !important;
 }
